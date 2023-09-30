@@ -1,0 +1,52 @@
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+.b-nav {
+    background-color: black;
+    flex-shrink: 0;
+    width: 80px;
+    height: 100vh;
+}
+
+.link-padding {
+    padding: 7px;
+    background-color: black;
+}
+
+.nav-spacing {
+    justify-content: space-between;
+}
+
+.active {
+    background-color: white;
+}
+
+.nav-item {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-item-account {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.navbar-link {
+    margin-bottom: 0;
+    color: white;
+    text-decoration: none;
+
+    :hover {
+        color: white;
+    }
+}
+
+
+
