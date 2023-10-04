@@ -1,0 +1,139 @@
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.b-nav {
+    background-color: black;
+    flex-shrink: 0;
+    width: 80px;
+    height: 100vh;
+}
+
+.link-padding {
+    padding: 7px;
+    background-color: black;
+}
+
+.nav-spacing {
+    justify-content: space-between;
+}
+
+.active {
+    background-color: white;
+}
+
+.nav-item {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-item-account {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.navbar-link {
+    margin-bottom: 0;
+    color: white;
+    text-decoration: none;
+
+    :hover {
+        color: white;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+}
+.profile-section {
+    width: 100vw;
+}
+
+.profile-page {
+    max-width: 100%;
+    column-gap: 50px;
+    padding-right: 6vw;
+}
+.profile-overview {
+    width: 60vw;
+    row-gap: 30px;
+}
+.profile-name {
+    row-gap: 20px;
+}
+.profile-screen {
+    width: 100vw;
+}
+
+#profile-navigation {
+    width: 200px;
+}
+
+.profile-icon {
+    font-size: 180px;
+}
+
+.list-group-flush {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.list-group-item {
+    color: #d41b2c;
+    font-weight: 400;
+    padding-left: 8px;
+    :hover {
+        color: #d41b2c;
+    }
+}
+
+.list-group-item.active {
+    color: black;
+    background-color: white;
+    border-left-width: 2px;
+    border-left-color: black;
+    border-top: none;
+    border-bottom: none;
+
+    :hover {
+        color: black;
+    }
+}
+
+.profile-edit-button {
+    background-color: whitesmoke;
+}
+
+.cancel-profile-button {
+    background-color: whitesmoke;
+}
+
+.save-profile-button {
+    background-color: #d41b2c;
+    color: white;
+}
+
+.profile-name {
+    row-gap: 10px;
+}
+
+.profile-name p {
+    font-weight: 600;
+}
+.input-group p {
+    font-weight: 600;
+}
+.link-input {
+    column-gap: 30px;
+}

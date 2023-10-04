@@ -1,0 +1,320 @@
+body {
+    font-family: "Inter";
+}
+
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    :hover {
+        text-decoration: underline;
+        text-decoration-color: #d41b2c;
+    }
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    color: #4C5860;
+}
+
+.b-nav {
+    background-color: black;
+    flex-shrink: 0;
+    width: 80px;
+    height: 100vh;
+}
+
+.link-padding {
+    padding: 7px;
+    background-color: black;
+}
+
+.nav-spacing {
+    justify-content: space-between;
+}
+
+.nav-item {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-item-account {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.navbar-link {
+    margin-bottom: 0;
+    color: white;
+    text-decoration: none;
+
+    :hover {
+        color: white;
+    }
+
+    .active {
+        color: #d41b2c;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.active {
+    background-color: white;
+}
+.courses-section {
+    width: 100vw;
+    padding: 25px;
+    position: relative;
+    z-index: -100;
+}
+
+.course-page {
+    max-width: 100%;
+    column-gap: 50px;
+    padding-right: 2vw;
+}
+.profile-overview {
+    width: 60vw;
+    row-gap: 30px;
+}
+.profile-name {
+    row-gap: 20px;
+}
+.profile-screen {
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+}
+
+#profile-navigation {
+    width: 200px;
+}
+.list-group-item {
+    color: #d41b2c;
+    font-weight: 400;
+    padding-left: 8px;
+
+    :hover {
+        color:#d41b2c;
+    }
+}
+
+.list-group-item i {
+    padding-right: 10px;
+}
+.list-group-item.active {
+    color: black;
+    background-color: white;
+    border-left-width: 2px;
+    border-left-color: black;
+    border-top: none;
+    border-bottom: none;
+
+    :hover {
+        color: black;
+    }
+}
+
+.profile-name {
+    row-gap: 10px;
+}
+
+.profile-name p {
+    font-weight: 600;
+}
+.input-group p {
+    font-weight: 600;
+}
+.link-input {
+    column-gap: 30px;
+}
+
+.published-courses {
+    padding: 30px;
+}
+
+.breadcrumb {
+    margin:0;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.list-group-item h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color:#3d454c;
+    margin: 0;
+}
+
+.list-group-item h3 {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 500;
+    color:#3d454c;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-wrap: nowrap;
+}
+
+.course-edit-menu {
+    row-gap: 20px;
+}
+
+.course-action-menu {
+    row-gap: 5px;
+}
+
+.to-do-list {
+    column-gap: 10px;
+}
+
+.coming-up-list {
+    column-gap: 10px;
+}
+
+.module-link h5 {
+    font-weight: 300;
+    color: #d41b2c;
+    margin: 0;
+}
+
+.fa-arrow-up-right-from-square {
+    margin-left: 5px;
+}
+
+#navbarNavDarkDropdown {
+    height: 100vh;
+}
+
+.mobile-navbar {
+    background-color: black;
+    height: 80px;
+    display: inline-block;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+  /* position: relative; */
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: #d41b2c;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #6B7780;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #d41b2c;
+}
+
+.closebtn {
+    color: #d41b2c;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.overlay-chevron {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content-push {
+    position: absolute;
+}
+
+.module {
+    :hover {
+        color:#3d454c;
+    }
+}
+
+.green-border {
+    border-left-width: 5px;
+    border-left-color: green;
+}
+
+.info-nav {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.assignment-search {
+    width: 250px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.assignment-edit-container {
+    width: 100%;
+    row-gap: 10px;
+}
+
+.submission-type-container {
+    margin: 0;
+    border: 1px solid lightgray;
+}
+
+.assign-container {
+    margin: 0;
+}

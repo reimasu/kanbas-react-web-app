@@ -6,139 +6,148 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link href="../navigation/navgiation.css" rel="stylesheet">
+        <link href="profile.css" rel="stylesheet">
     </head>
 <body>
-    <div class="d-flex flex-nowrap flex-column">
+    <div class="d-flex flex-nowrap flex-row profile-screen">
         <div class="b-sidebar b-nav zindex-fixed">
             <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary"> 
                 <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none link-padding">
                     <img src="../icons/NULogo.png" width="50px">
                 </a>
                 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center nav-spacing">
-                    <li class="nav-item-account d-flex flex-column justify-content-center active">
+                    <li class="nav-item-account d-flex flex-column justify-content-center ">
                         <a href="../profile/index.html"
-                        class="link-padding justify-content-center text-decoration-none">
-                            <i class="fa fa-user-circle fa-xl my-3" style="color: white;"></i>
-                            <p class="fs-6 navbar-link">Account</p>
+                        class="link-padding justify-content-center text-decoration-none active">
+                            <i class="fa fa-user-circle fa-xl my-3" style="color: #d41b2c;"></i>
+                            <p class="fs-6 navbar-link" style="color: #d41b2c;">Account</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
-                        <a href="#" class="link-padding text-decoration-none navbar-link">
-                            <i class="fa fa-gauge fa-xl my-3" style="color: red"></i>
+                        <a href="../dashboard/index.html" class="link-padding text-decoration-none navbar-link">
+                            <i class="fa fa-gauge fa-xl my-3" style="color: #d41b2c"></i>
                             <p class="fs-6 navbar-link">Dashboard</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
-                        <a href="#" class="link-padding text-decoration-none">
-                            <i class="fa fa-book fa-xl my-3" style="color: red"></i>
+                        <a href="../courses/course.html" class="link-padding text-decoration-none">
+                            <i class="fa fa-book fa-xl my-3" style="color: #d41b2c"></i>
                             <p class="fs-6 navbar-link">Courses</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
                         <a href="#" class="link-padding text-decoration-none">
-                            <i class="fa fa-calendar fa-xl my-3" style="color: red"></i>
+                            <i class="fa fa-calendar fa-xl my-3" style="color: #d41b2c"></i>
                             <p class="fs-6 navbar-link">Calendar</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
                         <a href="#" class="link-padding text-decoration-none navbar-link">
-                            <i class="fa fa-inbox fa-xl my-3" style="color: red;"></i>
+                            <i class="fa fa-inbox fa-xl my-3" style="color: #d41b2c;"></i>
                             <p class="fs-6 navbar-link">Inbox</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
                         <a href="#" class="link-padding text-decoration-none">
-                            <i class="fa fa-clock fa-xl my-3" style="color: red;"></i>
+                            <i class="fa fa-clock fa-xl my-3" style="color: #d41b2c;"></i>
                             <p class="fs-6 navbar-link">History</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
                         <a href="#" class="link-padding text-decoration-none">
-                            <i class="fa fa-tv fa-xl my-3" style="color: red;"></i>
+                            <i class="fa fa-tv fa-xl my-3" style="color: #d41b2c;"></i>
                             <p class="fs-6 navbar-link">Studio</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
                         <a href="#" class="link-padding text-decoration-none">
-                            <i class="fab fa-creative-commons fa-xl my-3" style="color: red;"></i>
+                            <i class="fab fa-creative-commons fa-xl my-3" style="color: #d41b2c;"></i>
                             <p class="fs-6 navbar-link">Commons</p>
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
                         <a href="#" class="link-padding text-decoration-none">
-                            <i class="fa fa-circle-question fa-xl my-3" style="color: red;"></i>
+                            <i class="fa fa-circle-question fa-xl my-3" style="color: #d41b2c;"></i>
                             <p class="fs-6 navbar-link">Help</p>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <nav class="navbar navbar-light bg-white fixed-top ms-80">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-            data-mdb-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent2"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars" style="color: red;"></i>
-          </button>
+        <!-- 2nd col in flex -->
+        <div class="d-flex profile-section flex-column">
+            <nav class="navbar navbar-light bg-white">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" >
+                    <i class="fas fa-bars" style="color: #d41b2c;"></i>
+                </button>
+                </div>
+            </nav>
+            <hr />
+            <div class="d-flex flex-row justify-content-between profile-page">
+                <!-- Profile Navigation -->
+                <div id="profile-navigation">
+                    <ul class="list-group-flush">
+                        <li class="list-group-item border-0">
+                            <a href="#">Notifications</a>
+                        </li>
+                        <li class="list-group-item active">
+                            <a href="#">Profile</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">Files</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">Settings</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">ePortfolio</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">Shared Content</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">The Hub</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">Qwickly Course Tools</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="#">Global Announcements</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Profile Overview -->
+                <div class="d-flex flex-column profile-overview">
+                    <div class="d-flex flex-column profile-name">
+                        <i class="fa fa-user-circle profile-icon " style="color: grey;"></i>
+                        <h2>Rei Masuya</h2>
+                    </div>
+                    <div>
+                        <h3>Contact</h3>
+                        <p>No registe#d41b2c services, you can add some on the settings page.</p>
+                    </div>
+                    <div>
+                        <h3>Biography</h3>
+                        <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
+                    </div>
+                    <div>
+                        <h3>Link</h3>
+                        <p>YouTube</p>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div>
+                    <a href="edit.html">
+                        <button class="btn btn-m profile-edit-button"
+                        type="button">
+                            <i class="fa-solid fa-pencil"></i>
+                            Edit Profile
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-    </nav>
-      <div class="collapse" id="navbarToggleExternalContent2">
-        <div class="bg-light shadow-3 p-4">
-          <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
-          <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
-          <button class="btn btn-link btn-block m-0">Link 3</button>
-        </div>
-      </div>
-    <div class="profile-scren d-flex flex-row">
-        <i class="fa fa-user" style="color: grey;"></i>
     </div>
+    
 </body>
-
-
-
-<!-- <table width="100%">
-    <tr valign="baseline">
-        <th align="left" style="width: 20%;">
-            <ul>
-                <li><a href="/public/kanbas/home.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </th>
-        <th align="left" style="width: 20%;">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </th>
-        <th align="left">
-        <h3>Rei Masuya's Profile</h3>
-        <hr/>
-        <div style="display: flex; justify-content: space-between;">
-            <h1 style="display: inline">Rei Masuya</h1>
-            <a href="edit.html"><button>Edit Profile</button></a>
-        </div>
-        <h2>Contact</h2>
-        <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
-        <h2>Biography</h2>
-        <p>Student, Learner, Foodie.</p>
-        <h2>Links</h2>
-        <a href="youtube.come">YouTube</a>
-        </th>
-    </tr>
-</table> -->
