@@ -75,11 +75,11 @@
             <i class="fa-solid fa-xmark fa-2xs" style="text-decoration: none;"></i>
         </a>
         <div class="overlay-content-push m-0 p-5" style="text-align: left; align-self: center;">
-            <a href="#" class="d-flex flex-row py-2 mb-3" style="color: c; vertical-align: middle;">
+            <a href="../dashboard/index.html" class="d-flex flex-row py-2 mb-3" style="color: #d41b2c; vertical-align: middle;">
                 <i class="fa fa-gauge fa-xs me-2 mt-2 mb-0"></i>
                 <h5 style="font-weight: 400;">Dashboard</h5>
             </a>
-            <a href="#" class="d-flex flex-row px-4 py-2 mb-3" style="color: #d41b2c;">
+            <a href="../profile/index.html" class="d-flex flex-row px-4 py-2 mb-3" style="color: #d41b2c;">
                 <i class="fa fa-user-circle fa-xs me-2 mt-2 mb-0" style="color: grey;"></i>
                 <h5 style="font-weight: 400;">Account</h5>
             </a>
@@ -135,7 +135,7 @@
                         </a>
                     </li>
                     <li class="nav-item d-flex flex-column justify-content-center">
-                        <a href="#" class="link-padding text-decoration-none navbar-link">
+                        <a href="../dashboard/index.html" class="link-padding text-decoration-none navbar-link">
                             <i class="fa fa-gauge fa-xl my-3" style="color: #d41b2c"></i>
                             <p class="fs-6 navbar-link">Dashboard</p>
                         </a>
@@ -226,10 +226,10 @@
                             <a href="#">Quizzes</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="../grades/index.html">Grades</a>
+                            <a href="../grades/grades.html">Grades</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="#">Modules</a>
+                            <a href="../courses/course.html">Modules</a>
                         </li>
                         <li class="list-group-item border-0">
                             <a href="#">People</a>
@@ -255,78 +255,152 @@
                     </ul>
                 </div>
                 <!-- Modules -->
-                <div class="list-group">
-                    <button type="button" class="list-group-item list-group-item-secondary text-start"><h4>Week 0 - INTRO</h4></button>
-                    <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
-                            <h3>LEARNING OBJECTIVES</h3>                    
-                        </div>
-                        <div class="align-middle">
-                            <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
-                            <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
-                        </div>
-                    </button>
-                    <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>                
-                            <h3 class="ms-4">Introduction to the course</h3>
-                        </div>
-                        <div class="align-middle">
-                            <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
-                            <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
-                        </div>
-                    </button>
-                    <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>              
-                            <h3 class="ms-4">Learn what is Web Development</h3>
-                        </div>
-                        <div class="align-middle">
-                            <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
-                            <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
-                        </div>
-                    </button>
-                    <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i> 
-                            <h3>SLIDES</h3>                    
-                        </div>
-                        <div class="align-middle">
-                            <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
-                            <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
-                        </div>
-                    </button>
-                    <!-- With Links -->
-                    <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
-                            <i class="fa-solid fa-link fa-s" style="color: green;"></i>
-                            <a href="#" class="module-link"><h5>Introduction to Web Development</h5></a>  
-                            <i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #d41b2c; align-self: center;"></i>                
-                        </div>
-                        <div class="align-middle">
-                            <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
-                            <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
-                        </div>
-                    </button>
-                    <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
-                            <i class="fa-solid fa-link fs-m" style="color: green;"></i>
-                            <a href="#" class="module-link"><h5>Creating an HTTP server with Node.js</h5></a>  
-                            <i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #d41b2c; align-self: center;"></i>                
-                        </div>
-                        <div class="align-middle">
-                            <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
-                            <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
-                        </div>
-                    </button>
+                <div class="d-flex flex-column module-section">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-secondary text-start">
+                            <h4>Week 0 - INTRO</h4>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
+                                <h3>LEARNING OBJECTIVES</h3>                    
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>                
+                                <h3 class="ms-4">Introduction to the course</h3>
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>              
+                                <h3 class="ms-4">Learn what is Web Development</h3>
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i> 
+                                <h3>SLIDES</h3>                    
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <!-- With Links -->
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
+                                <i class="fa-solid fa-link fa-s" style="color: green;"></i>
+                                <a href="#" class="module-link"><h5>Introduction to Web Development</h5></a>  
+                                <i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #d41b2c; align-self: center;"></i>                
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
+                                <i class="fa-solid fa-link fs-m" style="color: green;"></i>
+                                <a href="#" class="module-link"><h5>Creating an HTTP server with Node.js</h5></a>  
+                                <i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #d41b2c; align-self: center;"></i>                
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-secondary text-start">
+                            <h4>Week 1 - HTML</h4>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
+                                <h3>LEARNING OBJECTIVES</h3>                    
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>                
+                                <h3 class="ms-4">Introduction to the course</h3>
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>              
+                                <h3 class="ms-4">Learn what is Web Development</h3>
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i> 
+                                <h3>SLIDES</h3>                    
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <!-- With Links -->
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
+                                <i class="fa-solid fa-link fa-s" style="color: green;"></i>
+                                <a href="#" class="module-link"><h5>Introduction to Web Development</h5></a>  
+                                <i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #d41b2c; align-self: center;"></i>                
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                        <button type="button" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-grip-vertical fa-xs align-self-center pe-2" style="color: #3d454c;"></i>
+                                <i class="fa-solid fa-link fs-m" style="color: green;"></i>
+                                <a href="#" class="module-link"><h5>Creating an HTTP server with Node.js</h5></a>  
+                                <i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #d41b2c; align-self: center;"></i>                
+                            </div>
+                            <div class="align-middle">
+                                <i class="fa-solid fa-circle-check fs-m" style="color:green"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-m" style="color: #3d454c;"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
                 <!-- Right Side menu -->
                 <div class="d-xl-block d-none d-flex flex-column course-edit-menu">
                     <!-- Course Status -->
-                    <div>
+                    <div class="mb-2">
                         <h4>Course Status</h4>
                         <div class="btn-group">
                             <button type="button" class="btn btn-outline-secondary text-nowrap" style="background-color: #f5f5f5; color: #2d3b45;">
@@ -374,7 +448,7 @@
                         </div>
                     </div>
                     <!-- Coming up -->
-                    <div>
+                    <div class="mt-2">
                         <div>
                             <h5>Coming Up</h5>
                         </div>

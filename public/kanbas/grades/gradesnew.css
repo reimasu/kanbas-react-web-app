@@ -75,6 +75,7 @@ h6 {
 
     :hover {
         color: white;
+        text-decoration: none;
     }
 
     .active {
@@ -98,6 +99,7 @@ h6 {
 
 .course-page {
     max-width: 100%;
+    width: 100%;
     column-gap: 50px;
     padding-right: 2vw;
 }

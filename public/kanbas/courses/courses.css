@@ -10,7 +10,6 @@ p {
 
 a {
     text-decoration: none;
-    color: inherit;
 
     :hover {
         text-decoration: underline;
@@ -21,6 +20,10 @@ a {
 h3 {
     font-weight: 200;
     font-size: 38px;
+
+    :hover {
+        color: initial;
+    }
 }
 
 h4 {
@@ -73,6 +76,7 @@ h6 {
 
     :hover {
         color: white;
+        text-decoration: none;
     }
 
     .active {
@@ -120,9 +124,6 @@ h6 {
     font-weight: 400;
     padding-left: 8px;
 
-    :hover {
-        color:#d41b2c;
-    }
 }
 
 .list-group-item i {
@@ -182,14 +183,25 @@ h6 {
     margin-right: 0;
     margin-bottom: 0;
     text-wrap: nowrap;
+    
+    :hover {
+        color:#3d454c;
+    }
+}
+.list-group-item a {
+    color:#d41b2c;
+    :hover {
+        color:#d41b2c
+    }
 }
 
 .course-edit-menu {
-    row-gap: 20px;
+    row-gap: 40px;
 }
 
 .course-action-menu {
     row-gap: 5px;
+    margin-bottom: 15px;
 }
 
 .to-do-list {
@@ -204,6 +216,7 @@ h6 {
     font-weight: 300;
     color: #d41b2c;
     margin: 0;
+
 }
 
 .fa-arrow-up-right-from-square {
@@ -278,4 +291,15 @@ h6 {
 }
 .overlay-content-push {
     position: absolute;
+}
+
+.module-section {
+    row-gap: 30px;
+    width: 100%;
+}
+
+.navLink {
+    :hover {
+        text-decoration: none;
+    }
 }
