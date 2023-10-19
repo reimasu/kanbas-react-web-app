@@ -1,0 +1,42 @@
+.list-group {
+    width: 100%;
+}
+.list-group-item h3 {
+    width: 80%;
+    font-size: 18px;
+    font-weight: bold;
+    color:#3d454c;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-wrap: nowrap;
+    
+    :hover {
+        color:#3d454c;
+    }
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.grip-vertical {
+    height: 0.75em;
+    color:#3d454c;
+}
+
+.circle-check {
+    color: green;
+}
+
+.ellipsis-vertical {
+    color:#3d454c;
+}
+
+.module-section {
+    row-gap: 30px;
+}
+
+.full-width {
+    width: 100%;
+}

@@ -1,0 +1,48 @@
+.b-nav {
+    background-color: black;
+    flex-shrink: 0;
+    width: 80px;
+    height: 100vh;
+}
+
+.list-group-item {
+    color: white;
+    font-size: 0.875rem;
+}
+.nav-item {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+
+.list-group-item.active {
+    color: #d41b2c;
+    background-color: white;
+}
+
+.nav-item-account {
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-link {
+    margin-bottom: 0;
+    color: white;
+    text-decoration: none;
+
+    :hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    .active {
+        color: #d41b2c;
+    }
+}
+
+.red-icons {
+    color: #d41b2c;
+}
