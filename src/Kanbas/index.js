@@ -12,7 +12,6 @@ function Kanbas() {
     <div className={`d-flex flex-row flex-nowrap`}>
       <KanbasNavigation />
       <div className={`all-screens`}>
-        <hr/>
         <Routes>
           <Route path="/" element={<Navigate to="Dashboard" />} />
           <Route path="Home" element={<Home/>} />

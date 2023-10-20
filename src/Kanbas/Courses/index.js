@@ -5,13 +5,23 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
-
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './index.css';
 function Courses() {
   const { courseId } = useParams();
   const course = db.courses.find((course) => course._id === courseId);
   return (
-    <div className={`d-flex flex-row`}>
+    <div className={`d-flex flex-column`}>
+      <nav className="m-3" id="wd-breadcrumb1" style={{ "--bs-breadcrumb-divider": "'>'" }}
+             aria-label="breadcrumb">
+            <ol className="breadcrumb">
+                <li className="breadcrumb-item"><a href="#">{course.name}</a></li>
+                <li className="breadcrumb-item active" aria-current="page">{courseId}</li>
+            </ol>
+        </nav>
+        <hr />
+      <div className="d-flex flex-row">
       <CourseNavigation />
       <div className={`d-flex flex-column full-width`}>
         <div
@@ -29,6 +39,7 @@ function Courses() {
             <Route path="Grades" element={<h1>Grades</h1>} />
           </Routes>
         </div>
+      </div>
       </div>
     </div>
   );
