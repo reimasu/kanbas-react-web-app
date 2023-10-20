@@ -15,9 +15,8 @@
     }
 }
 
-h4 {
-    font-size: 18px;
-    font-weight: 300;
+.list-group-item p {
+    color:#3d454c;
 }
 
 .grip-vertical {
@@ -35,8 +34,5 @@ h4 {
 
 .module-section {
     row-gap: 30px;
-}
-
-.full-width {
     width: 100%;
 }

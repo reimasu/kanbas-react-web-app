@@ -7,7 +7,6 @@ import './ModuleList.css'
 function ModuleList() {
   const { courseId } = useParams();
   const modules = db.modules;
-  const weeks = ["Week 1", "Week 2"];
   return (
     <div className={`d-flex flex-column module-section`}>
           {modules
@@ -15,13 +14,10 @@ function ModuleList() {
          .map((module, index) => (
       <div class={`list-group full-width`}>
 
-          <button class={`d-flex justify-content-between list-group-item list-group-item-action`}>
-          <div class={`d-flex`}>
-              <h3>{module.name}</h3>                    
-          </div>
+          <button class={`d-flex flex-column list-group-item list-group-item-secondary`}>
+              <h3 class={`text-start`}>{module.name}</h3>
+              <p>{module.description}</p>                    
           </button>
-
-
       </div>
       ))}
     </div>

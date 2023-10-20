@@ -1,12 +1,15 @@
 import { Link, useParams, useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import db from "../../Database";
+
 
 function CourseNavigation() {
   const links = ["Home", "Modules","Piazza", "Zoom Meetings",
    "Assignments", "Quizzes", "Grades", "People"];
   const { courseId } = useParams();
   const { pathname } = useLocation();
+
   return (
     <ul className={`list-group-flush`} style={{ width: 200 }}>
       {links.map((link, index) => (

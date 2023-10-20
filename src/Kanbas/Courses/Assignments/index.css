@@ -1,0 +1,30 @@
+.list-group-item h3 {
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+.grip-vertical {
+    color: #3d454c;
+    height: 0.75em;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.ellipsis-vertical {
+    color:#3d454c;
+    height: 0.75em;
+    align-self: center;
+    padding-right: 5px;
+}
+
+.module {
+    :hover {
+        color:#3d454c;
+    }
+}
+
+.green-border {
+    border-left-width: 5px;
+    border-left-color: green;
+}

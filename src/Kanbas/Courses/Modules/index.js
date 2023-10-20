@@ -1,4 +1,6 @@
 import ModuleList from "./ModuleList";
+import StatusNavigation from "../StatusNavigation";
+
 function Modules() {
   return (
     <div className="full-width">
