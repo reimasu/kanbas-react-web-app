@@ -15,6 +15,7 @@
     }
 }
 
+
 .list-group-item p {
     color:#3d454c;
 }
@@ -35,4 +36,5 @@
 .module-section {
     row-gap: 30px;
     width: 100%;
+
 }

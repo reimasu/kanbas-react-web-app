@@ -8,9 +8,9 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './index.css';
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className={`d-flex flex-column`}>
       <nav className="m-3" id="wd-breadcrumb1" style={{ "--bs-breadcrumb-divider": "'>'" }}

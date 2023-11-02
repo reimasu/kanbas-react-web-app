@@ -112,3 +112,9 @@ h5 {
     padding: 10px;
 }
 
+.dashboard-buttons {
+    padding-top: 0;
+    :hover {
+        text-decoration: none;
+    }
+}

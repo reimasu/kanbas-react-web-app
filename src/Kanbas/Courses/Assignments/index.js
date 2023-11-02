@@ -1,18 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import { faEllipsisVertical, faGripVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
+  // const assignments = db.assignments;
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch;
   return (
     <div>
+      {/* buttons */}
+      <div className="d-flex justify-content-between">
+        <input type="text" class="form-control w-50" placeholder="Search for Assignment"/>
+        <div className="d-inline-flex gap-2">
+          <button type="button" class="btn btn-secondary">Group</button>
+          <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
+          <button type="button" class="btn btn-danger">+Assignment</button>
+          </Link>
+        </div>
+      </div>
+      <hr/>
       <div className="list-group">
         <button type="button" class="list-group-item list-group-item-secondary text-start module">
             <div class="d-flex flex-row justify-content-between">
@@ -23,12 +37,23 @@ function Assignments() {
                 <FontAwesomeIcon icon={faEllipsisVertical} class="ellipsis-vertical"></FontAwesomeIcon>
             </div>
         </button>
-        {courseAssignments.map((assignment) => (
+        {assignments
+        .filter((assignment) => assignment.course === courseId)
+        .map((assignment) => (
           <Link
             key={assignment._id}
             to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item d-flex justify-content-between list-group-item list-group-item-action module green-border">
-            <h3>{assignment.title}</h3>
+            className="list-group-item  list-group-item list-group-item-action module green-border">
+              <div className="d-flex flex-row justify-content-between">
+                <div className="me-5">
+                  <h3>{assignment.title}</h3>
+                  <p>{assignment.description}</p>
+                  <p>Due Date: {assignment.dueDate}</p>
+                  <p>Available from: {assignment.availableFromDate} Until: {assignment.availableUntilDate}</p>
+                </div>
+                <button type="button" className="btn btn-danger"
+                onClick={() => dispatch(deleteAssignment(assignment._id))}>Delete</button>     
+              </div>
           </Link>
         ))}
       </div>
