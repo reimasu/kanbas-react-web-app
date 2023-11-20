@@ -7,7 +7,6 @@ import Home from "./Courses/Home";
 import Account from "./Account";
 import db from "./Database";
 import store from "./store";
-import * as service from "./service";
 import { Provider } from "react-redux";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -56,16 +55,13 @@ function Kanbas() {
   //   }
   // };
   const deleteCourse = async (course) => {
-    try {
-      await service.deleteCourse(course);
+      const response = await axios.delete(`${URL}/${courseId}`);
       setCourses(courses.filter((c) => c._id !== course._id));
-    } catch (error) {
-      console.log(error);
-    }
   };
+
   const updateCourse = async (course) => {
     try {
-      await service.updateCourse(course);
+      await axios.put(`${URL}/${course._id}`, course);
       setCourses(
         courses.map((c) => {
           if (c._id === course._id) {
