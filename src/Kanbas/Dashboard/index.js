@@ -44,7 +44,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                             <img src={cardImages[index]} className="card-img-top"/>
                             <FontAwesomeIcon icon={faEllipsisVertical} className="ellipsis-icon top-0 end-0 fa-xl"></FontAwesomeIcon>
                         </div>
-                        <Link key={course._id} to={`/Kanbas/courses/${course._id}`}> 
+                        <Link key={course._id} to={`/Kanbas/courses/${course._id.$oid}`}> 
                             <div className="card-body">
                               <h5 className={cardTitles[index]}>
                                 {course.number} {course.name}</h5>
