@@ -48,7 +48,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                             <div className="card-body">
                               <h5 className="card-title-1">
                                 {course.number} {course.name}</h5>
-                              <h4 className={courseTitles[index]}>{course.number}</h4>
+                              <h4 className="course-title-1">{course.number}</h4>
                               <p className="card-text">{course.startDate} to {course.endDate}</p>
                             </div>
                             <div className="card-body dashboard-buttons">
