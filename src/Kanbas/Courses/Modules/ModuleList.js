@@ -69,7 +69,7 @@ function ModuleList() {
                 <p>{module.description}</p> 
               </div>
               <div className="p-2">
-                <button onClick={handleDeleteModule(module._id)} type="button" className="btn btn-danger m-2">Delete</button>
+                <button onClick={() => handleDeleteModule(module._id)} type="button" className="btn btn-danger m-2">Delete</button>
                 <button onClick={() => dispatch(setModule(module))} type="button" class="btn btn-success">Edit</button>
               </div>
           </button>
