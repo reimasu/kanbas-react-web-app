@@ -46,7 +46,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                         </div>
                         <Link key={course._id} to={`/Kanbas/courses/${course._id.$oid}`}> 
                             <div className="card-body">
-                              <h5 className={cardTitles[index]}>
+                              <h5 className="card-title-1">
                                 {course.number} {course.name}</h5>
                               <h4 className={courseTitles[index]}>{course.number}</h4>
                               <p className="card-text">{course.startDate} to {course.endDate}</p>
