@@ -31,9 +31,24 @@ function EncodingParametersInURLs() {
       <h3>Fetching Welcome</h3>
       <h3>{welcome}</h3>
       <h4>Calculator</h4>
-      <input value={result}
-        className="form-control mb-2" type="number" readOnly
-      />
+      <input
+        onChange={(e) => setA(e.target.value)}
+        className="form-control" type="number" value={a}/>
+      <input
+        onChange={(e) => setB(e.target.value)}
+        className="form-control" type="number" value={b}/>
+      <h3>Path Parameters</h3>
+      <a
+        href={`http://localhost:4000/a5/add/${a}/${b}`}
+        className="btn btn-primary">
+        Add {a} + {b}
+      </a>
+      <a
+        href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+        className="btn btn-danger">
+        Substract {a} - {b}
+      </a>
+
       <h3>Fetch Result</h3>
       <button onClick={() => fetchSum(a, b)}
         className="btn btn-primary mb-2  w-100" >

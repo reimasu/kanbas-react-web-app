@@ -1,5 +1,5 @@
-import WorkingWithFunctions from "../a3/WorkingWithFunctions";
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
+import WorkingWithObjects from "./WorkingWithObjects";
 import WorkingWithArrays from "./WorkingWithArrays";
 
 function Assignment5() {
@@ -12,7 +12,7 @@ function Assignment5() {
             Welcome
           </a>
           <EncodingParametersInURLs />
-          <WorkingWithFunctions />
+          <WorkingWithObjects />
           <WorkingWithArrays />
         </div>
       </div>

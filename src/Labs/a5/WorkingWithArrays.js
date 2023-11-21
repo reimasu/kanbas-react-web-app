@@ -70,6 +70,14 @@ function WorkingWithArrays() {
         className="form-control mb-2"
         type="text"
         />
+        <button onClick={createTodo}
+              className="btn btn-primary mb-2 w-100">
+        Create Todo
+        </button>
+        <button onClick={updateTitle}
+              className="btn btn-success mb-2 w-100">
+        Update Title
+        </button>
         <textarea
         onChange={(e) => setTodo({ ...todo,
           description: e.target.value })}
@@ -94,10 +102,7 @@ function WorkingWithArrays() {
       <button onClick={updateTodo}>
         Update Todo
       </button>
-        <button onClick={updateTitle}
-              className="btn btn-success mb-2 w-100">
-        Update Title
-        </button>
+        
         <ul className="list-group">
         {todos.map((todo) => (
           <li key={todo.id}
@@ -127,10 +132,7 @@ function WorkingWithArrays() {
           </li>
         ))}
         </ul>
-        <button onClick={createTodo}
-              className="btn btn-primary mb-2 w-100">
-        Create Todo
-        </button>
+        
         <h3>Updating an Item in an Array</h3>
         <a
         href={`${API}/${todo.id}/title/${todo.title}`}
