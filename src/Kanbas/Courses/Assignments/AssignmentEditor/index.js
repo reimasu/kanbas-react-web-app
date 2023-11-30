@@ -4,7 +4,6 @@ import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } f
 import { useSelector, useDispatch } from "react-redux";
 import './index.css';
 import { setModules } from "../../Modules/modulesReducer";
-import * as client from "../client";
 
 
 
