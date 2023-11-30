@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "../assignmentsReducer";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "../assignmentReducer";
 import { useSelector, useDispatch } from "react-redux";
 import './index.css';
 import { setModules } from "../../Modules/modulesReducer";
