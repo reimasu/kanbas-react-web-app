@@ -13,18 +13,7 @@ function AssignmentEditor() {
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
   const { courseId } = useParams();
-  useEffect(() => {
-    findAssignmentsForCourse(courseId)
-      .then((assignments) =>
-        dispatch(selectAssignment(assignments))
-    );
-  }, [courseId]);
 
-  const handleAddAssignment = () => {
-    createAssignment(courseId, assignment).then((assignment) => {
-      dispatch(addAssignment(assignment));
-    });
-  };
 
   return (
     <div className="d-flex flex-column gap-3">
