@@ -1,84 +1,66 @@
-import React, {useState, useEffect} from "react";
-import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
-import { faEllipsisVertical, faGripVertical } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import React from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "../assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "./assignmentsReducer";
-import { createAssignment, findAssignmentsForCourse } from "./client";
-import * as client from "./client";
+import './index.css';
 
-function Assignments() {
-  const { courseId } = useParams();
+
+
+function AssignmentEditor() {
+  const { assignmentId } = useParams();
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
-  useEffect(() => {
-    findAssignmentsForCourse(courseId)
-      .then((assignments) =>
-        dispatch(selectAssignment(assignments))
-    );
-  }, [courseId]);
-
-
-
-  const handleDeleteAssignment = (assignmentId) => {
-    client.deleteAssignment(assignmentId).then((status) => {
-      dispatch(deleteAssignment(assignmentId));
-    });
-  };
-
-  const handleUpdateModule = async () => {
-    const status = await client.updateAssignment(assignment);
-    dispatch(updateAssignment(assignment));
-  };
+  const { courseId } = useParams();
 
   return (
-    <div>
-      {/* buttons */}
-      <div className="d-flex justify-content-between">
-        <input type="text" class="form-control w-50" placeholder="Search for Assignment"/>
-        <div className="d-inline-flex gap-2">
-          <button type="button" class="btn btn-secondary">Group</button>
-          <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
-          <button type="button" class="btn btn-danger">+Assignment</button>
-          </Link>
+    <div className="d-flex flex-column gap-3">
+      <label for="assignmentName">Assignment Name</label>
+      <input id="assignmentName" value={assignment.title}
+             className="form-control mb-2"
+             onChange={(e) => dispatch(selectAssignment({ ...assignment, title: e.target.value}))}/>
+      <textarea value={assignment.description} className="form-control"
+              onChange={(e) => dispatch(selectAssignment({ ...assignment, description: e.target.value}))}/>
+      <div className="d-inline-flex gap-2 big-margin">
+        <label for="points" className="col-form-label">Points</label>
+        <input type="number" class="form-control" placeholder="100" />
+      </div>
+      <div className="d-inline-flex gap-2 big-margin">
+        <label for="assign" className="col-form-label">Points</label>
+        <div className="form-control">
+          <label for="dueDate">Due</label>
+          <div className="input-group">
+            <input type="date" class="form-control" id="dueDate" value={assignment.dueDate} aria-describedby="basic-addon2"
+            onChange={(e) => dispatch(selectAssignment({ ...assignment, dueDate: e.target.value}))}/>
+          </div>
+          <div className="row">
+            <label className="col" for="dueDate">Available from</label>
+            <label className="col" for="dueDate">Until</label>
+          </div>
+          <div className="row">
+            <div className="input-group col">
+              <input type="date" class="form-control" id="dueDate" value={assignment.availableFromDate} aria-describedby="basic-addon2"
+                onChange={(e) => dispatch(selectAssignment({ ...assignment, availableFromDate: e.target.value}))}/>
+            </div>
+            <div className="input-group col">
+              <input type="date" class="form-control" id="dueDate" value={assignment.availableUntilDate} aria-describedby="basic-addon2"
+              onChange={(e) => dispatch(selectAssignment({ ...assignment, availableUntilDate: e.target.value}))}/>
+            </div>
+          </div>
         </div>
       </div>
-      <hr/>
-      <div className="list-group">
-        <button type="button" class="list-group-item list-group-item-secondary text-start module">
-            <div class="d-flex flex-row justify-content-between">
-                <div class="d-flex">
-                    <FontAwesomeIcon icon={faGripVertical} class="grip-vertical"></FontAwesomeIcon>
-                    <h4>Assignments</h4>
-                </div>
-                <FontAwesomeIcon icon={faEllipsisVertical} class="ellipsis-vertical"></FontAwesomeIcon>
-            </div>
+      <div className="row gap-3 big-margin justify-content-end w-25">
+        <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+              className="col btn btn-secondary">
+          Cancel
+        </Link>
+        <button onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))} className="col btn btn-danger me-2">
+          Save
         </button>
-        {assignments
-        .filter((assignment) => assignment.course === courseId)
-        .map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id.$oid}`}
-            className="list-group-item  list-group-item list-group-item-action module green-border">
-              <div className="d-flex flex-row justify-content-between">
-                <div className="me-5">
-                  <h3>{assignment.title}</h3>
-                  <p>{assignment.description}</p>
-                  <p>Due Date: {assignment.dueDate}</p>
-                  <p>Available from: {assignment.availableFromDate} Until: {assignment.availableUntilDate}</p>
-                </div>
-                <button type="button" className="btn btn-danger"
-                onClick={() => handleDeleteAssignment(assignment._id)}>Delete</button>     
-              </div>
-          </Link>
-        ))}
       </div>
     </div>
   );
 }
-export default Assignments;
+
+
+export default AssignmentEditor;
