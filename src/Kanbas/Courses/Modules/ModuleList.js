@@ -63,7 +63,7 @@ function ModuleList() {
       {modules
          .filter((module) => module.course === courseId)
          .map((module, index) => (
-          <button className="d-flex flex-row list-group-item justify-content-between list-group-item-secondary">
+          <div className="d-flex flex-row list-group-item justify-content-between list-group-item-secondary">
               <div className="m-2">
                 <h3 className="text-start">{module.name}</h3>
                 <p>{module.description}</p> 
@@ -72,7 +72,7 @@ function ModuleList() {
                 <button onClick={() => handleDeleteModule(module._id)} type="button" className="btn btn-danger m-2">Delete</button>
                 <button onClick={() => dispatch(setModule(module))} type="button" class="btn btn-success">Edit</button>
               </div>
-          </button>
+          </div>
           ))}
       </li>
       

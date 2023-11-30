@@ -35,7 +35,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                   <input value={course.endDate} className="form-control" type="date"
                         onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
                   <button type="button" class="btn btn-success" onClick={addNewCourse}>Add</button>
-                  <button type="button" class="btn btn-primary" onClick={updateCourse}>Update</button>
+                  <button type="button" class="btn btn-primary"  onClick={() => updateCourse(course)}>Update</button>
                 </div>
                 <div className="card-grid">
                     {courses.map((course, index) => (

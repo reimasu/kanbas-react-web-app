@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "../assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
 import './index.css';
+import { setModules } from "../../Modules/modulesReducer";
+import * as client from "../client";
 
 
 
@@ -12,6 +14,18 @@ function AssignmentEditor() {
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
   const { courseId } = useParams();
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(selectAssignment(assignments))
+    );
+  }, [courseId]);
+
+  const handleAddAssignment = () => {
+    createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
 
   return (
     <div className="d-flex flex-column gap-3">
