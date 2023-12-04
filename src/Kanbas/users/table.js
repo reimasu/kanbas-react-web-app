@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BsFillCheckCircleFill, BsPencil, BsPlusCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { BsTrash3Fill, BsFillCheckCircleFill, BsPencil, BsPlusCircleFill } from "react-icons/bs";
 
 import * as client from "./client";
 function UserTable() {
@@ -29,6 +30,14 @@ function UserTable() {
     try {
       const status = await client.updateUser(user);
       setUsers(users.map((u) => (u._id === user._id ? user : u)));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const deleteUser = async (user) => {
+    try {
+      await client.deleteUser(user);
+      setUsers(users.filter((u) => u._id !== user._id));
     } catch (err) {
       console.log(err);
     }
@@ -64,21 +73,32 @@ function UserTable() {
                 <option value="STUDENT">Student</option>
               </select>
             </td>
-            <td className="text-nowrap">
-                <BsFillCheckCircleFill onClick={updateUser}
+            <td>
+              <BsFillCheckCircleFill onClick={updateUser}
                 className="me-2 text-success fs-1 text" />
-                <BsPlusCircleFill onClick={createUser}
-                className="text-success fs-1 text" />
+              <BsPlusCircleFill onClick={createUser}
+                  className="text-success fs-1 text" />
             </td>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
             <tr key={user._id}>
-              <td>{user.username}</td>
+              <td>
+                <Link to={`/project/account/${user._id}`}>
+                  {user.username}
+                </Link>
+              </td>
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
-            </tr>))}
+              <button className="btn btn-warning me-2">
+                <BsPencil onClick={() => selectUser(user)} />
+              </button>
+              <button onClick={() => deleteUser(user)}>
+                <BsTrash3Fill />
+              </button>
+            </tr>
+            ))}
         </tbody>
       </table>
     </div>

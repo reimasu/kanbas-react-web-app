@@ -18,17 +18,17 @@ function Signup() {
     <div>
       <h1>Signup</h1>
       {error && <div>{error}</div>}
-      <input
+      <input className="form-control"
         value={credentials.username}
         onChange={(e) => setCredentials({
           ...credentials,
           username: e.target.value })} />
-      <input
+      <input className="form-control" type="password"
         value={credentials.password}
         onChange={(e) => setCredentials({
           ...credentials,
           password: e.target.value })} />
-      <button onClick={signup}>
+      <button className="btn btn-primary" type="submit" onClick={signup}>
         Signup
       </button>
     </div>
